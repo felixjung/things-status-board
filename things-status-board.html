@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-control" content="no-cache" />
+	<title>Today's Tasks</title>
+	<style type="text/css">
+		@import url("http://URL-TO-THE-CSS-FILE");
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://URL-TO-THE-JS-FILE"></script>
+	<script type="text/javascript">
+		function init() {
+			// Change page background to black if the URL contains "?Desktop", for debugging while developing on your computer
+			if (document.location.href.indexOf('Development') > -1) {
+				document.getElementById('tasks_container').style.backgroundColor = 'black';
+			}
+		}
+
+		$(document).ready(function() {
+			$.ajaxSetup({ cache: false });
+			daemon();
+		});
+	</script>
+</head>
+<body onload="init()">
+	<div id="main">
+		<div id="tasks_container">
+		</div>
+	</div>
+</body>
+</html>
