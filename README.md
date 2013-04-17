@@ -1,5 +1,7 @@
 # Things Status Board Panel
 
+![Things SB Panel Screenshot](https://dl.dropboxusercontent.com/u/220991/things-status-board.png)
+
 [Status Board](http://panic.com/statusboard/) is an iPad app by [Panic Inc.](http://panic.com/) that allows you do display (visualised) data from a plethora of sources on your iPad.
 
 This DIY panel for Status Board displays tasks from the 'Today' list of [Things.app](http://culturedcode.com/things/) by [Cultured Code](http://culturedcode.com/), including the number of days until their due date (should they have one) and their corresponding area or project.
@@ -12,7 +14,7 @@ This DIY panel is supposed to be used with [Dropbox](http://dropbox.com) but can
 The local AppleScript extracts the tasks from your 'Today' list and returns them as text in csv format. The shell script that calls the AppleScript writes the returned text into the csv file in your public folder on Dropbox. The csv file is read and processed into html by the javascript in your dropbox when Status Board loads the html file through its public url.
 
 ## Setup
-1. Put the shell script and the AppleScript into your ~/Library/Sripts folder (I made a sub-folder called Things-Status-Board).
+1. Put the shell script and the AppleScript into your ~/Library/Sripts folder (I made a sub-folder for this).
 2. Change the paths inside the shell script to match that of the AppleScript and the destination of your csv file (the latter should be somewhere in your public Dropbox folder; preferably in the same folder as the files in the next step).
 3. Copy the css, js, and html files to your public Dropbox folder (again, I've created a sub-folder like above).
 4. Modify the URL to the css file ('http://URL-TO-THE-CSS-FILE') inside the html file to match its public url given by Dropbox.
