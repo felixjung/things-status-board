@@ -48,7 +48,7 @@ function daemon() {
 7. Put the plist file into ~/Library/LaunchAgents.
 8. Modify the path to your script folder inside the plist file to match the folder where the shell script is stored.
 
-```plist
+```xml
 <key>ProgramArguments</key>
 <array>
     <string>/PATH/TO/SCRIPT/FOLDER/exportThingsTasksToCSV.sh</string>
@@ -57,7 +57,7 @@ function daemon() {
 
 9. Modify the path to your csv file folder inside the plist file to match the folder inside your public Dropbox folder, where the csv file is stored.
 
-```plist
+```xml
 <key>StandardOutPath</key>
 <string>/PATH/TO/DROPBOX/FOLDER/CONTAINING/CSV/FILE/tasks.csv</string>
 ```
