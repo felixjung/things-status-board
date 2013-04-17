@@ -19,17 +19,17 @@ Setup
 2. Change the paths inside the shell script to match that of the AppleScript and the destination of your csv file (the latter should be somewhere in your public Dropbox folder; preferably in the same folder as the files in the next step).
 3. Copy the css, js, and html files to your public Dropbox folder (again, I've created a sub-folder like above).
 4. Modify the URL to the css file ('http://URL-TO-THE-CSS-FILE') inside the html file to match its public url given by Dropbox.
-```html
+~~~~~ html
 <style type="text/css">
 	@import url("http://URL-TO-THE-CSS-FILE");
 </style>
-```
+~~~~~
 5. Modify the URL to the js file inside the html file to match its public url given by Dropbox.
-```html
+~~~~~ html
 <script src="http://URL-TO-THE-JS-FILE"></script>
-```
+~~~~~
 6. Modify the URL to the csv file inside the js file to match its public url given by Dropbox.
-```javascript
+~~~~~ javascript
 function daemon() {
 	$.ajax({
 		type: "GET",
@@ -41,20 +41,20 @@ function daemon() {
 		}
 	});
 }
-```
+~~~~~
 7. Put the plist file into ~/Library/LaunchAgents.
 8. Modify the path to your script folder inside the plist file to match the folder where the shell script is stored.
-```plist
+~~~~~ plist
 <key>ProgramArguments</key>
 <array>
     <string>/PATH/TO/SCRIPT/FOLDER/exportThingsTasksToCSV.sh</string>
 </array>
-```
+~~~~~
 9. Modify the path to your csv file folder inside the plist file to match the folder inside your public Dropbox folder, where the csv file is stored.
-```plist
+~~~~~ plist
 <key>StandardOutPath</key>
 <string>/PATH/TO/DROPBOX/FOLDER/CONTAINING/CSV/FILE/tasks.csv</string>
-```
+~~~~~
 10. Load the service into launchd as shown for example [here](http://nathangrigg.net/2012/07/schedule-jobs-using-launchd/).
 
 Optional:
