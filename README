@@ -26,7 +26,7 @@ The local AppleScript extracts the tasks from your 'Today' list and returns them
 <script src="http://URL-TO-THE-JS-FILE"></script>
 ```
 6. Modify the URL to the csv file inside the js file to match its public url given by Dropbox.
-```js
+```javascript
 function daemon() {
 	$.ajax({
 		type: "GET",
