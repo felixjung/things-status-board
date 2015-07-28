@@ -1,3 +1,6 @@
+### Notice
+I'm no longer maintaining the Things status board as Panic is currently working on Status Board 2. If anyone would like to take over development, please let me know.
+
 # Things Status Board Panel
 
 ![Things SB Panel Screenshot](https://dl.dropboxusercontent.com/u/220991/things-status-board.png)
